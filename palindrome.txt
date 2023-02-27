@@ -1,0 +1,25 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  x EST_DU_TYPE NOMBRE
+  palind EST_DU_TYPE CHAINE
+  result EST_DU_TYPE CHAINE
+  longueur EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  result PREND_LA_VALEUR ""
+  LIRE palind
+  longueur PREND_LA_VALEUR palind.length
+  POUR x ALLANT_DE 1 A longueur+1
+    DEBUT_POUR
+    # substr() est un fonction qui permet de d inverser un chaine
+    result PREND_LA_VALEUR result+palind.substr(longueur-x+1,1)
+    FIN_POUR
+  AFFICHER result
+  SI (result==palind ou palind=="" ou longueur==1) ALORS
+    DEBUT_SI
+    AFFICHER " bravo c'est un palind"
+    FIN_SI
+    SINON
+      DEBUT_SINON
+      AFFICHER " c'est pas un palindrome"
+      FIN_SINON
+FIN_ALGORITHME
